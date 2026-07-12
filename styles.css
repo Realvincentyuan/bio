@@ -1571,6 +1571,16 @@ a {
     color: #cbd5e1; /* Boost label visibility */
 }
 
+[data-theme="dark"] .main-footer {
+    background: rgba(15, 23, 42, 0.85);
+    border-top-color: rgba(99, 102, 241, 0.2);
+}
+
+[data-theme="dark"] .copyright,
+[data-theme="dark"] .tech-stack-info {
+    color: var(--text-secondary);
+}
+
 /* ==========================================================================
    PHOTOGRAPHY PORTFOLIO SECTION
    ========================================================================== */
