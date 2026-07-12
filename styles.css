@@ -921,7 +921,7 @@ a {
 
 .radar-label {
     font-family: 'Outfit', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     fill: var(--text-primary);
     text-anchor: middle;
@@ -939,7 +939,7 @@ a {
 }
 
 .skills-card h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 16px;
     color: var(--accent-purple);
     display: flex;
@@ -967,7 +967,7 @@ a {
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(226, 232, 240, 0.6);
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: var(--text-secondary);
     transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
@@ -1352,7 +1352,7 @@ a {
     
     .skill-tag {
         padding: 4px 10px !important;
-        font-size: 0.85rem !important;
+        font-size: 0.75rem !important;
     }
     
     .highlights-grid {
