@@ -487,21 +487,13 @@ a {
 
 .logo {
     font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 1.25rem;
     color: var(--text-primary);
     display: flex;
     align-items: center;
-}
-
-.logo-accent {
-    color: var(--accent-purple);
-    font-weight: 800;
-}
-
-.logo-surname {
-    color: var(--text-secondary);
-    font-weight: 400;
+    letter-spacing: -0.5px;
+    transition: color var(--transition-fast);
 }
 
 .nav-links {
@@ -1543,9 +1535,7 @@ a {
     color: #cbd5e1; /* Boost label visibility */
 }
 
-[data-theme="dark"] .logo-surname {
-    color: var(--text-primary); /* Ensure logo stands out on dark background */
-}
+
 
 /* ==========================================================================
    PRINT STYLESHEET
