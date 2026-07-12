@@ -1514,7 +1514,25 @@ a {
 }
 
 [data-theme="dark"] .lock-screen {
-    background: rgba(11, 15, 25, 0.75); /* Darken the background mask on lock screen for high contrast */
+    background: rgba(11, 15, 25, 0.25); /* Translucent overlay letting the space-nebula mesh show through */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .lock-card {
+    background: rgba(15, 23, 42, 0.85); /* Rich dark space-slate card background */
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .lock-form input {
+    background: rgba(30, 41, 59, 0.6); /* High-contrast input field background */
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .lock-form input:focus {
+    border-color: var(--accent-purple);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
 }
 
 [data-theme="dark"] .lock-description {
