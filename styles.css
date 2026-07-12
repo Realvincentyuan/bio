@@ -1219,12 +1219,12 @@ a {
     }
     
     .section {
-        padding: 50px 16px !important;
+        padding: 50px 24px !important;
     }
     
     .main-header {
         top: 10px;
-        width: calc(100% - 20px);
+        width: calc(100% - 48px);
         height: var(--header-height);
         padding: 0 16px;
     }
@@ -1300,7 +1300,7 @@ a {
     }
     
     .timeline-container::before {
-        left: 16px;
+        left: 12px;
     }
     
     .timeline-node {
@@ -1313,15 +1313,15 @@ a {
     }
     
     .timeline-badge {
-        left: 16px;
+        left: 12px;
         width: 16px;
         height: 16px;
         border-width: 3px;
     }
     
     .timeline-card {
-        width: calc(100% - 32px);
-        margin-left: 32px !important;
+        width: calc(100% - 28px);
+        margin-left: 28px !important;
         padding: 20px !important;
         border-radius: 16px !important;
     }
