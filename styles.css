@@ -847,6 +847,35 @@ a {
     color: var(--text-secondary);
 }
 
+.timeline-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timeline-bullets li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    padding-left: 18px;
+    position: relative;
+}
+
+.timeline-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent-purple);
+    flex-shrink: 0;
+}
+
 /* ==========================================================================
    EXPERTISE SECTION
    ========================================================================== */

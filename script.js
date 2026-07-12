@@ -189,6 +189,12 @@ function renderProfile(data) {
     data.journey.forEach(item => {
         const node = document.createElement('div');
         node.className = 'timeline-node reveal-up';
+
+        // Build bullet list or fall back to paragraph
+        const bodyHTML = Array.isArray(item.bullets)
+            ? `<ul class="timeline-bullets">${item.bullets.map(b => `<li>${b}</li>`).join('')}</ul>`
+            : `<p class="timeline-desc">${item.description || ''}</p>`;
+
         node.innerHTML = `
             <div class="timeline-badge"></div>
             <div class="timeline-card glass">
@@ -198,7 +204,7 @@ function renderProfile(data) {
                     <i data-lucide="map-pin" class="timeline-loc-icon"></i>
                     <span>${item.location}</span>
                 </div>
-                <p class="timeline-desc">${item.description}</p>
+                ${bodyHTML}
             </div>
         `;
         timelineContainer.appendChild(node);
