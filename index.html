@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Yuan - Senior Manager, Data Science</title>
+    <meta name="description" content="Online portfolio and professional resume of Vincent Yuan, Senior Manager of Data Science at Capital One. Exploring the journey from Shanghai to Chicago through data and machine learning.">
+    
+    <!-- Google Fonts: Outfit (Display) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Theme Toggle Setup (Prevent Visual Flash) -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+<body>
+    <!-- Ambient Moving Mesh Gradient Background -->
+    <div class="mesh-background" id="mesh-bg">
+        <div class="mesh-orb orb-1"></div>
+        <div class="mesh-orb orb-2"></div>
+        <div class="mesh-orb orb-3"></div>
+        <div class="mesh-orb orb-4"></div>
+    </div>
+
+    <!-- Passcode Lock Screen Overlay -->
+    <div id="lock-screen" class="lock-screen">
+        <div class="lock-card glass">
+            <button id="lock-theme-toggle" class="lock-theme-toggle-btn" aria-label="Toggle Theme">
+                <i data-lucide="moon" id="lock-theme-icon"></i>
+            </button>
+            <div class="lock-icon-container">
+                <i data-lucide="lock" class="lock-icon"></i>
+            </div>
+            <h2>Vincent Yuan</h2>
+            <p class="subtitle">Senior Manager, Data Science</p>
+            <p class="lock-description">This professional profile is secure. Enter the access code to decrypt and view the resume.</p>
+            
+            <form id="lock-form" class="lock-form">
+                <div class="input-wrapper">
+                    <input type="password" id="passcode-input" placeholder="Enter access code..." required autocomplete="current-password">
+                    <button type="submit" id="unlock-btn" aria-label="Unlock">
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <div id="error-message" class="error-message">
+                    <i data-lucide="alert-circle" class="err-icon"></i>
+                    <span>Incorrect passcode. Please try again.</span>
+                </div>
+            </form>
+            
+            <div class="demo-badge">
+                <span class="badge-label">Demo Code</span>
+                <code class="badge-code">chicago</code>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container (Hidden until Decrypted) -->
+    <div id="main-content" class="main-content" style="display: none;">
+        <!-- Glass Navigation Header -->
+        <header class="main-header glass">
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <span class="logo-accent">V</span>incent<span class="logo-surname">.Yuan</span>
+                </a>
+                <nav class="nav-links">
+                    <a href="#about" class="nav-link active">About</a>
+                    <a href="#journey" class="nav-link">Journey</a>
+                    <a href="#expertise" class="nav-link">Expertise</a>
+                    <a href="#highlights" class="nav-link">Highlights</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="btn btn-secondary btn-icon-only" aria-label="Toggle Theme" style="margin-right: 8px;">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="about" class="hero-section section">
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <div class="location-tag reveal-up">
+                        <i data-lucide="map-pin" class="tag-icon"></i>
+                        <span id="profile-location">Loading location...</span>
+                    </div>
+                    <h1 class="hero-title reveal-up">
+                        Hi, I'm <span class="gradient-text" id="profile-name">Vincent Yuan</span>
+                    </h1>
+                    <h2 class="hero-subtitle reveal-up" id="profile-title">
+                        Senior Manager, Data Science
+                    </h2>
+                    <p class="hero-description reveal-up" id="profile-bio">
+                        Loading biography...
+                    </p>
+                    <div class="hero-ctas reveal-up">
+                        <a href="#highlights" class="btn btn-primary">View Portfolio</a>
+                        <a href="#journey" class="btn btn-secondary">Explore Journey</a>
+                    </div>
+                </div>
+                <div class="hero-badge-container reveal-up">
+                    <div class="interactive-hero-card glass">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="avatar-replacement">
+                                <i data-lucide="brain-circuit" class="avatar-icon"></i>
+                            </div>
+                            <h3>AI & ML Leader</h3>
+                            <p>Translating complex algorithms into high-impact financial risk & business decisions.</p>
+                            <div class="card-stats">
+                                <div class="stat-item">
+                                    <span class="stat-num">8+</span>
+                                    <span class="stat-label">Team Members</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-num">10+</span>
+                                    <span class="stat-label">ML Models In Prod</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Section -->
+        <section id="journey" class="journey-section section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">Timeline</span>
+                    <h2 class="section-title">My Journey</h2>
+                    <p class="section-desc">From the bustling technological hub of Shanghai to the leading financial analytics center in Chicago.</p>
+                </div>
+                <div class="timeline-container" id="timeline-container">
+                    <!-- Dynamic Timeline Nodes Rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="expertise-section section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">Capabilities</span>
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <p class="section-desc">A quantitative toolkit spanning advanced machine learning architectures, enterprise infrastructure, and agile team leadership.</p>
+                </div>
+                <div class="expertise-grid">
+                    <!-- Left Column: Interactive Skill Radar Chart -->
+                    <div class="chart-wrapper glass reveal-up">
+                        <h3>Skill Distribution</h3>
+                        <div class="radar-chart-container" id="radar-chart-container">
+                            <!-- Custom SVG Radar Chart Created by JS -->
+                        </div>
+                    </div>
+                    <!-- Right Column: Skills Categorized -->
+                    <div class="skills-categories reveal-up" id="skills-categories-container">
+                        <!-- Dynamic Skills Rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section id="highlights" class="highlights-section section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">Impact</span>
+                    <h2 class="section-title">Career Highlights</h2>
+                    <p class="section-desc">Key achievements in machine learning deployment, product optimization, and MLOps transformation.</p>
+                </div>
+                <div class="highlights-grid" id="highlights-container">
+                    <!-- Dynamic Highlights Cards Rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section">
+            <div class="container contact-container-simple reveal-up">
+                <div class="contact-info-simple">
+                    <span class="section-tag">Connect</span>
+                    <h2 class="section-title">Let's Build Something Impactful</h2>
+                    <p class="contact-desc">Interested in discussing AI strategy, credit risk analytics, ML operations, or hiring collaboration? Get in touch!</p>
+                    
+                    <div class="contact-cards-grid">
+                        <a href="#" id="contact-email-card" class="contact-card-item glass">
+                            <div class="icon-box">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p id="contact-email">loading...</p>
+                            <span class="card-action">Send Email <i data-lucide="arrow-right"></i></span>
+                        </a>
+                        <a href="#" id="contact-linkedin" target="_blank" rel="noopener" class="contact-card-item glass">
+                            <div class="icon-box">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <h3>LinkedIn</h3>
+                            <p>View Profile</p>
+                            <span class="card-action">Visit Profile <i data-lucide="arrow-right"></i></span>
+                        </a>
+                        <a href="#" id="contact-github" target="_blank" rel="noopener" class="contact-card-item glass">
+                            <div class="icon-box">
+                                <i data-lucide="github"></i>
+                            </div>
+                            <h3>GitHub</h3>
+                            <p>View Repositories</p>
+                            <span class="card-action">Explore Repos <i data-lucide="arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container footer-container">
+                <p class="copyright">&copy; <span id="footer-year">2026</span> Vincent Yuan. All rights reserved.</p>
+                <p class="tech-stack-info">Secured static page built with HTML5, CSS3, & Web Crypto AES-256-GCM.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Encrypted Payload -->
+    <script src="encrypted_data.js"></script>
+    
+    <!-- Application Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
