@@ -1277,6 +1277,11 @@ a {
         margin-right: 4px !important;
     }
     
+    .hero-section {
+        padding-top: calc(var(--header-height) + 70px) !important;
+        min-height: auto;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         gap: 30px;
