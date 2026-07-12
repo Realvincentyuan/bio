@@ -1513,6 +1513,22 @@ a {
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
 }
 
+[data-theme="dark"] .lock-screen {
+    background: rgba(11, 15, 25, 0.75); /* Darken the background mask on lock screen for high contrast */
+}
+
+[data-theme="dark"] .lock-description {
+    color: #e2e8f0; /* Boost text readability on the dark card */
+}
+
+[data-theme="dark"] .badge-label {
+    color: #cbd5e1; /* Boost label visibility */
+}
+
+[data-theme="dark"] .logo-surname {
+    color: var(--text-primary); /* Ensure logo stands out on dark background */
+}
+
 /* ==========================================================================
    PRINT STYLESHEET
    ========================================================================== */
